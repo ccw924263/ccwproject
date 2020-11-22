@@ -3,3 +3,8 @@
 /target
 /ccw.component/ccw.component.redis/target/
 /ccw.web.springboot/target/
+/ccw.web.springboot/ccw.web.springboot.iml
+/ccwproject.iml
+/ccw.component/ccw.component.iml
+/ccw.component/ccw.component.apollo/ccw.component.apollo.iml
+/ccw.component/ccw.component.redis/ccw.component.redis.iml
