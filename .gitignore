@@ -1,3 +1,5 @@
 /springboottest.iml
 /.idea
 /target
+/ccw.component/ccw.component.redis/target/
+/ccw.web.springboot/target/
