@@ -1,15 +1,15 @@
-package com.ccw.services.impl;
+package com.ccw.impl;
 
+import com.ccw.IUserLoginService;
 import com.ccw.mapper.UserLoginMapper;
 import com.ccw.pojo.UserLogin;
-import com.ccw.services.UserLoginServicesI;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
-public class UserLoginServicesImpl implements UserLoginServicesI {
+@Service("userLoginService")
+public class UserLoginServiceImpl implements IUserLoginService {
 
     @Autowired
     private UserLoginMapper userLoginMapper;

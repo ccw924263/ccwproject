@@ -1,7 +1,7 @@
 package com.ccw.controller;
 
+import com.ccw.IUserLoginService;
 import com.ccw.pojo.UserLogin;
-import com.ccw.services.impl.UserLoginServicesImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +15,7 @@ public class MyController {
     private static Logger logger = LoggerFactory.getLogger(MyController.class);
 
     @Autowired
-    UserLoginServicesImpl userLoginServicesImpl;
+    IUserLoginService userLoginService;
 
     @RequestMapping("/toLogin")
     public String toLogin(){
@@ -25,9 +25,9 @@ public class MyController {
     @RequestMapping("/LoginSuccess")
     public String LoginSuccess(Model model, UserLogin userLogin){
         //先查询看该用户名是否存在
-        UserLogin userLogin1 = userLoginServicesImpl.queryByName(userLogin.getUserName());
-        if(userLogin1 != null){ //  如果查询的用户不为空
-            System.out.println(userLogin1.toString());
+        UserLogin user = userLoginService.queryByName(userLogin.getUserName());
+        if(user != null){ //  如果查询的用户不为空
+            logger.info(user.toString());
             return "success";
         }
         else{
@@ -44,7 +44,7 @@ public class MyController {
     @RequestMapping("/RegisterSuccess")
     public String toRegisterSuccess(Model model,UserLogin userLogin){
         //将账号密码加入到数据库中
-        int add = userLoginServicesImpl.add(userLogin);
+        int add = userLoginService.add(userLogin);
         logger.info("数据插入成功！");
         model.addAttribute("data","注册成功，请登录！");
         return "login";
