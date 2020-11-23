@@ -18,13 +18,13 @@ public class RedisController {
     @ResponseBody
     public String putToRedis(String key, String value) {
         redisService.putToRedis(key, value);
-        return "putToRedis success";
+        return "ccw putToRedis success";
     }
 
     @ResponseBody
     @RequestMapping(value = "/getByKey", method = RequestMethod.GET)
     public String getByKey(String key) {
-        return redisService.getByKey(key);
+        return "hello : " + redisService.getByKey(key);
     }
 
 }
