@@ -19,7 +19,6 @@
         <module>ccw.web.springboot</module>
         <module>ccw.component</module>
         <module>ccw.core</module>
-        <module>ccw.core.dao</module>
     </modules>
 
     <properties>

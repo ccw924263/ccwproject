@@ -9,7 +9,7 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <name>ccw.springboot</name>
+    <name>web.springboot</name>
     <version>1.0-SNAPSHOT</version>
     <groupId>ccw.project</groupId>
     <artifactId>ccw.web.springboot</artifactId>
