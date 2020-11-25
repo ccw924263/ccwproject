@@ -14,13 +14,9 @@ import org.springframework.web.bind.annotation.RestController;
 @EnableDiscoveryClient
 @ComponentScans({})
 @MapperScan(basePackages = "com.ccw")
-public class MainApplication {
+public class ConsumerApplication {
     public static void main(String[] args) {
-        SpringApplication.run(MainApplication.class, args);
+        SpringApplication.run(ConsumerApplication.class, args);
     }
 
-    @RequestMapping("/demo")
-    public String home() {
-        return "Hello World! ccw-Demo";
-    }
 }

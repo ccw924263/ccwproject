@@ -5,7 +5,7 @@ spring:
     username: root
     password: 12345678
   application:
-    name: ccw-nacos-provider #服务名
+    name: ccw-nacos-consumer #服务名
   cloud:
     nacos:
       discovery:

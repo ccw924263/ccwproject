@@ -8,3 +8,5 @@
 /ccw.component/ccw.component.iml
 /ccw.component/ccw.component.apollo/ccw.component.apollo.iml
 /ccw.component/ccw.component.redis/ccw.component.redis.iml
+/ccw.component/ccw.component.rocketmq/ccw.component.rocketmq.iml
+/ccw.web.consumer/ccw.web.consumer.iml
