@@ -170,6 +170,10 @@
             <name>Spring Maven MILESTONE Repository</name>
             <url>https://repo.spring.io/libs-milestone</url>
         </repository>
+        <repository>
+            <id>mvnrepository</id>
+            <url>https://mvnrepository.com/</url>
+        </repository>
     </repositories>
     <pluginRepositories>
         <pluginRepository>
@@ -179,6 +183,10 @@
         <pluginRepository>
             <id>spring-milestones</id>
             <url>https://repo.spring.io/milestone</url>
+        </pluginRepository>
+        <pluginRepository>
+            <id>mvnrepository</id>
+            <url>https://mvnrepository.com/</url>
         </pluginRepository>
     </pluginRepositories>
 
