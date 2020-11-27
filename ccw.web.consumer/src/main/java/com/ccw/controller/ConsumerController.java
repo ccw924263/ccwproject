@@ -24,7 +24,7 @@ public class ConsumerController {
     public String echoConfigInfo(){
         //Access through the combination of LoadBalanceClient and RestTemplate
         ServiceInstance serviceInstance = loadBalancerClient.choose("ccw-nacos-provider");
-        String path = String.format("http://%s:%s/info",serviceInstance.getHost(),serviceInstance.getPort());
+        String path = String.format("http://%s:%s/provider/info",serviceInstance.getHost(),serviceInstance.getPort());
         System.out.println("request path:" +path);
         return restTemplate.getForObject(path,String.class);
     }
