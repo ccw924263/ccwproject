@@ -17,6 +17,7 @@ public class ConsumerController {
 
     @Autowired
     private LoadBalancerClient loadBalancerClient;
+
     @Autowired
     private RestTemplate restTemplate;
 
@@ -34,10 +35,4 @@ public class ConsumerController {
     }
 
 
-    //Instantiate RestTemplate Instance
-    @Bean
-    public RestTemplate restTemplate(){
-
-        return new RestTemplate();
-    }
 }
