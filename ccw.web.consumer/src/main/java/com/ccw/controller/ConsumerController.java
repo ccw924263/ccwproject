@@ -1,5 +1,7 @@
 package com.ccw.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
@@ -10,6 +12,8 @@ import org.springframework.web.client.RestTemplate;
 
 @RestController
 public class ConsumerController {
+
+    private static Logger logger = LoggerFactory.getLogger(ConsumerController.class);
 
     @Autowired
     private LoadBalancerClient loadBalancerClient;
@@ -25,7 +29,7 @@ public class ConsumerController {
         //Access through the combination of LoadBalanceClient and RestTemplate
         ServiceInstance serviceInstance = loadBalancerClient.choose("ccw-nacos-provider");
         String path = String.format("http://%s:%s/provider/info",serviceInstance.getHost(),serviceInstance.getPort());
-        System.out.println("request path:" +path);
+        logger.info("request path:" +path);
         return restTemplate.getForObject(path,String.class);
     }
 
